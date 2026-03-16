@@ -73,7 +73,7 @@ export function Navbar() {
           </a>
 
           {/* Mobile menu */}
-          <Sheet open={open} onOpenChange={setOpen}>
+          {mounted && <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               render={
                 <Button variant="ghost" size="icon" className="md:hidden" />
@@ -100,7 +100,7 @@ export function Navbar() {
                 </a>
               </div>
             </SheetContent>
-          </Sheet>
+          </Sheet>}
         </div>
       </nav>
     </header>
