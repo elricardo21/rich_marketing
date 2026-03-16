@@ -55,8 +55,8 @@ export function Hero() {
           </BlurFade>
         </div>
 
-        {/* Photo */}
-        <BlurFade delay={0.3} className="flex-shrink-0">
+        {/* Photo — hidden on mobile */}
+        <BlurFade delay={0.3} className="flex-shrink-0 hidden lg:block">
           <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] rounded-2xl overflow-hidden border-2 border-[#3b82f6]/20">
             <Image
               src="/hero-photo-color.jpg"

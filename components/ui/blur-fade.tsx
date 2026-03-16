@@ -19,11 +19,11 @@ export function BlurFade({
   children,
   className,
   variant,
-  duration = 0.4,
+  duration = 0.25,
   delay = 0,
   yOffset = 6,
   inView = false,
-  inViewMargin = "-50px",
+  inViewMargin = "-100px",
   blur = "6px",
 }: BlurFadeProps) {
   const ref = useRef(null);
@@ -43,7 +43,7 @@ export function BlurFade({
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={combinedVariants}
-      transition={{ delay: 0.04 + delay, duration, ease: "easeOut" }}
+      transition={{ delay: 0.02 + delay * 0.5, duration, ease: "easeOut" }}
       className={className}
     >
       {children}
