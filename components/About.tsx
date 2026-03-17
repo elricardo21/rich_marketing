@@ -6,7 +6,7 @@ const steps = [
   {
     number: "01",
     title: "Obchod & Akvizice",
-    desc: "5 let v přímém prodeji, 10 000+ hovorů. Rozumím tomu, co potřebujete — protože jsem na vaší straně stál.",
+    desc: "Přes 1 000 schůzek s klienty. Rozumím tomu, co potřebujete — protože jsem na vaší straně stál.",
     color: "#f95738",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -46,7 +46,7 @@ const steps = [
   {
     number: "04",
     title: "Agentura v jedné osobě",
-    desc: "Vše pod jednou střechou — strategie, exekuce, AI automatizace. Bez zbytečných mezičlánků a omáčky.",
+    desc: "Vše pod jednou střechou — strategie, exekuce, AI. Bez zbytečných mezičlánků a omáčky.",
     color: "#3b82f6",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -65,10 +65,10 @@ export function About() {
         <BlurFade inView delay={0.1}>
           <p className="text-[#f95738] text-sm tracking-widest uppercase mb-3">Moje cesta</p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Švýcarský nůž pro e-commerce
+            Jsem kompletní agentura v jednom člověku
           </h2>
           <p className="text-muted-foreground max-w-2xl mb-16 text-base leading-relaxed">
-            Jsem kompletní agentura v jednom člověku. Grafika, nastavení, tracking, PPC, Shoptet —
+            Švýcarský nůž pro e-commerce. Grafika, nastavení, tracking, PPC, Shoptet —
             a hlavně přidaná hodnota je v normálním jednání. Vidím věci i z pozice klienta
             díky vlastním projektům.
           </p>

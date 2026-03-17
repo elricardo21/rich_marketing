@@ -30,7 +30,7 @@ export function Hero() {
           <BlurFade delay={0.3}>
             <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               Komplexní vedení v online světě srozumitelně a bez omáčky.
-              PPC, Shoptet, AI automatizace — vše pod jednou střechou, bez zbytečných mezičlánků.
+              PPC, Shoptet, AI, marketingová strategie — vše pod jednou střechou, bez zbytečných mezičlánků.
             </p>
           </BlurFade>
 

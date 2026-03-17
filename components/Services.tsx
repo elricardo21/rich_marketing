@@ -24,7 +24,7 @@ const services = [
       "Hloubková znalost platformy",
       "Úpravy šablon přes HTML/CSS",
       "Napojování doplňků a integrací",
-      "Tracking a analytika v Shoptetu",
+      "Certifikovaný Shoptet Partner",
     ],
   },
   {
@@ -45,7 +45,7 @@ const services = [
     items: [
       "GA4 + GTM implementace",
       "Search Console",
-      "Propojení s Shoptetem",
+      "Práce s XML feedy",
       "Čistá data pro správná rozhodnutí",
     ],
   },
