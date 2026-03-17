@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Marquee } from "@/components/ui/marquee";
+import { CaseStudyModal } from "@/components/CaseStudyModal";
 
 type Tag = "PPC" | "Shoptet" | "Content" | "Kód" | "Mailing";
 
@@ -31,15 +33,24 @@ const projects: { name: string; logo: string; tags: Tag[] }[] = [
 
 
 export function Portfolio() {
+  const [caseStudyOpen, setCaseStudyOpen] = useState(false);
+
   return (
     <section id="portfolio" className="py-24" style={{ backgroundColor: "var(--background-alt)" }}>
       <div className="max-w-6xl mx-auto px-6">
         <BlurFade inView delay={0.1}>
           <p className="text-[#3b82f6] text-sm tracking-widest uppercase mb-3">Portfolio</p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Vybrané projekty</h2>
-          <p className="text-muted-foreground max-w-xl mb-16 text-base">
+          <p className="text-muted-foreground max-w-xl mb-6 text-base">
             Shoptet projekty a e-shopy, které mám za sebou. 100+ klientů v historii správy PPC.
           </p>
+          <button
+            onClick={() => setCaseStudyOpen(true)}
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#f95738] hover:text-[#f95738]/80 transition-colors mb-16 group"
+          >
+            Zobrazit case studies
+            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+          </button>
         </BlurFade>
       </div>
 
@@ -79,6 +90,8 @@ export function Portfolio() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--background-alt)] to-transparent" />
         </div>
       </BlurFade>
+
+      <CaseStudyModal open={caseStudyOpen} onClose={() => setCaseStudyOpen(false)} />
     </section>
   );
 }
