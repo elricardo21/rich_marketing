@@ -24,7 +24,7 @@ export function SpeakingBanner() {
 
             {/* Video thumbnail */}
             <a
-              href="https://www.youtube.com/watch?v=G-HB8yMReeE"
+              href="https://www.youtube.com/watch?v=G-HB8yMReeE&t=2s"
               target="_blank"
               rel="noopener noreferrer"
               className="relative flex-shrink-0 group"
