@@ -4,19 +4,29 @@ import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Marquee } from "@/components/ui/marquee";
 
-const projects = [
-  { name: "PMN Nerez", logo: "/clients/1.png" },
-  { name: "Dellinger", logo: "/clients/2.png" },
-  { name: "Voodoo Cycles", logo: "/clients/3.png" },
-  { name: "Kouzelný Obchůdek", logo: "/clients/4.png" },
-  { name: "Hitra", logo: "/clients/5.png" },
-  { name: "AUT", logo: "/clients/6.png" },
-  { name: "VESTA", logo: "/clients/7.png" },
-  { name: "Expan Migua", logo: "/clients/8.png" },
-  { name: "Weco Travel", logo: "/clients/9.png" },
-  { name: "Hustý Stavby", logo: "/clients/10.png" },
-  { name: "Contraband Zone", logo: "/clients/11.png" },
-  { name: "Garden Spirit", logo: "/clients/12.png" },
+type Tag = "PPC" | "Shoptet" | "Content" | "Kód" | "Mailing";
+
+const tagColors: Record<Tag, string> = {
+  PPC:     "bg-[#0f172a] text-[#3b82f6] border border-[#3b82f6]/30",
+  Shoptet: "bg-[#0f172a] text-[#f95738] border border-[#f95738]/30",
+  Content: "bg-[#0f172a] text-[#3b82f6] border border-[#3b82f6]/20",
+  Kód:     "bg-[#0f172a] text-[#f95738] border border-[#f95738]/20",
+  Mailing: "bg-[#0f172a] text-[#3b82f6] border border-[#3b82f6]/20",
+};
+
+const projects: { name: string; logo: string; tags: Tag[] }[] = [
+  { name: "PMN Nerez",        logo: "/clients/1.png",  tags: ["Content", "Shoptet", "Kód"] },
+  { name: "Dellinger",        logo: "/clients/2.png",  tags: ["Shoptet", "Mailing", "Kód"] },
+  { name: "Voodoo Cycles",    logo: "/clients/3.png",  tags: ["Shoptet", "PPC"] },
+  { name: "Kouzelný Obchůdek",logo: "/clients/4.png",  tags: ["PPC"] },
+  { name: "Art Villas",       logo: "/clients/5.png",  tags: ["Content"] },
+  { name: "Polep AUT",        logo: "/clients/6.png",  tags: ["Content", "PPC"] },
+  { name: "VESTA",            logo: "/clients/7.png",  tags: ["PPC"] },
+  { name: "Expan Migua",      logo: "/clients/8.png",  tags: ["Shoptet", "Kód"] },
+  { name: "Weco Travel",      logo: "/clients/9.png",  tags: ["Content", "PPC"] },
+  { name: "Hustý Stavby",     logo: "/clients/10.png", tags: ["PPC"] },
+  { name: "Contraband Zone",  logo: "/clients/11.png", tags: ["PPC"] },
+  { name: "Garden Spirit",    logo: "/clients/12.png", tags: ["PPC"] },
 ];
 
 
@@ -39,8 +49,20 @@ export function Portfolio() {
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="flex items-center justify-center rounded-xl bg-white/60 w-44 h-44 sm:w-48 sm:h-48 hover:bg-white transition-all duration-300 group"
+                className="relative flex items-center justify-center rounded-xl bg-white/60 w-44 h-44 sm:w-48 sm:h-48 hover:bg-white transition-all duration-300 group"
               >
+                {/* Tags */}
+                <div className="absolute top-2 right-2 flex flex-col items-end gap-1">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className={`${tagColors[tag]} text-[9px] font-semibold px-1.5 py-0.5 rounded leading-tight`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
                 <Image
                   src={project.logo}
                   alt={`${project.name} logo`}
