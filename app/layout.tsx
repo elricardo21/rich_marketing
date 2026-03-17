@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://richmarketing.cz"),
   title: "RICH_MARKETING | Senior Marketing Technologist",
   description:
-    "Kde se marketing a technologie potkávají s člověčinou. PPC, Shoptet, AI automatizace — komplexní vedení v online světě srozumitelně a bez omáčky.",
+    "Kde se marketing a technologie potkávají s člověčinou. PPC, Shoptet, AI, marketingová strategie — komplexní vedení v online světě srozumitelně a bez omáčky.",
   keywords: [
     "marketing",
     "PPC",
@@ -20,10 +20,14 @@ export const metadata: Metadata = {
     "Meta Ads",
     "Sklik",
     "Shoptet",
+    "Shoptet Partner",
     "e-commerce",
-    "AI automatizace",
+    "AI",
+    "marketingová strategie",
     "online marketing",
     "správa kampaní",
+    "XML feedy",
+    "case studies",
     "Richard Stočes",
     "RICH_MARKETING",
   ],
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "RICH_MARKETING",
     title: "RICH_MARKETING | Senior Marketing Technologist",
     description:
-      "PPC, Shoptet, AI automatizace — komplexní vedení v online světě srozumitelně a bez omáčky.",
+      "PPC, Shoptet, AI, marketingová strategie — komplexní vedení v online světě srozumitelně a bez omáčky.",
     images: [
       {
         url: "/hero-photo-color.jpg",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RICH_MARKETING | Senior Marketing Technologist",
     description:
-      "PPC, Shoptet, AI automatizace — komplexní vedení v online světě srozumitelně a bez omáčky.",
+      "PPC, Shoptet, AI, marketingová strategie — komplexní vedení v online světě srozumitelně a bez omáčky.",
     images: ["/hero-photo-color.jpg"],
   },
   robots: {
@@ -79,7 +83,7 @@ export default function RootLayout({
               name: "RICH_MARKETING",
               url: "https://richmarketing.cz",
               description:
-                "Komplexní vedení v online světě — PPC, Shoptet, AI automatizace.",
+                "Komplexní vedení v online světě — PPC, Shoptet, AI, marketingová strategie.",
               founder: {
                 "@type": "Person",
                 name: "Richard Stočes",
@@ -103,7 +107,10 @@ export default function RootLayout({
                 "PPC marketing",
                 "Google Ads",
                 "Shoptet e-commerce",
-                "AI automatizace",
+                "Shoptet Partner",
+                "AI",
+                "Marketingová strategie",
+                "XML feedy",
                 "Online marketing",
               ],
             }),
