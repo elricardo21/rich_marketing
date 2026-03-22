@@ -5,7 +5,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, CheckCircle2, Mail, Phone } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Linkedin, Mail, Phone } from "lucide-react";
 
 interface ServiceLPProps {
   badge: string;
@@ -86,13 +86,15 @@ export function ServiceLP({
             </BlurFade>
 
             <BlurFade delay={0.4}>
-              <ShimmerButton
-                onClick={() =>
-                  document.querySelector("#lp-kontakt")?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                {ctaText} →
-              </ShimmerButton>
+              <div className="flex justify-center">
+                <ShimmerButton
+                  onClick={() =>
+                    document.querySelector("#lp-kontakt")?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  {ctaText} →
+                </ShimmerButton>
+              </div>
             </BlurFade>
           </div>
         </section>
@@ -154,7 +156,7 @@ export function ServiceLP({
                 <p className="text-xs text-muted-foreground mt-1">klientů v historii</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-[#3b82f6]">5+ let</p>
+                <p className="text-2xl sm:text-3xl font-bold text-[#3b82f6]">10+ let</p>
                 <p className="text-xs text-muted-foreground mt-1">praxe v marketingu</p>
               </div>
               <div>
@@ -194,6 +196,17 @@ export function ServiceLP({
                   <Phone className="h-5 w-5 text-[#f95738]" />
                   <span className="text-sm font-medium group-hover:text-[#f95738] transition-colors">
                     +420 777 443 252
+                  </span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/richardstoces/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-4 rounded-xl border border-border hover:border-[#3b82f6]/50 transition-all duration-300"
+                >
+                  <Linkedin className="h-5 w-5 text-[#3b82f6]" />
+                  <span className="text-sm font-medium group-hover:text-[#3b82f6] transition-colors">
+                    LinkedIn
                   </span>
                 </a>
               </div>
